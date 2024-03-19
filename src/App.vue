@@ -1,4 +1,4 @@
-<template>
+<template id="Appvue">
 	<div id="app">
 
 		<!--路由视图-->
@@ -12,15 +12,14 @@
 </template>
 
 <script>
-	export default {
-		name: "App",
-
-	};
+	export default{
+		
+	}
 </script>
 
 <style>
 	#app{
-		
 		text-align: center;
+		
 	}
 </style>

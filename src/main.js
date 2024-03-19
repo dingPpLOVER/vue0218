@@ -13,7 +13,10 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component);
 }
 //配置全局axios
-import axios from './untils/axios'
+// import axios from './untils/axios'
 //添加到全局属性
-app.config.globalProperties.$http = axios
-app.use(router).use(ElementPlus).mount("#app");
+// app.config.globalProperties.$http = axios
+
+import Layui from '@layui/layui-vue'
+import '@layui/layui-vue/lib/index.css'
+app.use(router).use(ElementPlus).use(Layui).mount("#app");
