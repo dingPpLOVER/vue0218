@@ -21,3 +21,9 @@
 .el-table .success-row {
   --el-table-tr-bg-color: var(--el-color-success-light-9);
 }
+.tab{
+	margin-top: 20px;
+}
+.inp2{
+	margin-left: 3px;
+}
