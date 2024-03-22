@@ -26,9 +26,12 @@
 }
 .inp2{
 	margin-left: 3px;
+<<<<<<< HEAD
 }
 #largeScreen{
 	height: 850px;
 	width: 100%;
 	background: linear-gradient(to right , #000232,#000451,#000232);
+=======
+>>>>>>> 4fd9da1087ba67900f9da46041a5f97225da31bd
 }
