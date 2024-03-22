@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
 	<div ref="echartsRef" style="width: 600px; height: 400px;"></div>
 	<button @click="getref">获取ref值</button>
 	<div ref="dd">hello world !</div>
@@ -57,16 +56,8 @@
 
 		chart.setOption(option);
 	});
+
 </script>
 
 <style>
-	/* 样式内容 */
-=======
-</template>
-
-<script>
-</script>
-
-<style>
->>>>>>> 4fd9da1087ba67900f9da46041a5f97225da31bd
 </style>

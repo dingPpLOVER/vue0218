@@ -5,10 +5,7 @@
 		<router-view />
 		<!-- <router-link to='/first'>返回</router-link>| -->
 		<div style="margin-top: 20px;">
-<<<<<<< HEAD
 			<router-link to='/large_screen' class="lin">large_screen</router-link>
-=======
->>>>>>> 4fd9da1087ba67900f9da46041a5f97225da31bd
 			<router-link to='/index' class="lin">element-plus</router-link>
 			<router-link to='/second' class="lin">layui-vue</router-link>
 			<router-link to='/three' class="lin">echarts</router-link>

@@ -2,10 +2,8 @@ import {createRouter,createWebHistory} from '../../node_modules/vue-router/index
 import Index from '@/views/index';
 import Second from '@/views/second';
 import Three from '@/views/three'
-<<<<<<< HEAD
 import Large_screen from '@/views/large_screen'
-=======
->>>>>>> 4fd9da1087ba67900f9da46041a5f97225da31bd
+
 // 路由配置
 const routes = [{
 		path: '/',
