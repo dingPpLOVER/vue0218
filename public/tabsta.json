@@ -1,0 +1,101 @@
+[{
+		"number": "1",
+		"status": "接待中",
+		"complected": "15"
+	},
+	{
+		"number": "2",
+		"status": "接待中",
+		"complected": "16"
+	},
+	{
+		"number": "3",
+		"status": "接待中",
+		"complected": "17"
+	},
+	{
+		"number": "4",
+		"status": "接待中",
+		"complected": "18"
+	},
+	{
+		"number": "5",
+		"status": "接待中",
+		"complected": "19"
+	},
+	{
+		"number": "6",
+		"status": "接待中",
+		"complected": "20"
+	},
+	{
+		"number": "7",
+		"status": "接待中",
+		"complected": "21"
+	},
+	{
+		"number": "8",
+		"status": "接待中",
+		"complected": "22"
+	},
+	{
+		"number": "9",
+		"status": "接待中",
+		"complected": "23"
+	},
+	{
+		"number": "10",
+		"status": "接待中",
+		"complected": "24"
+	},
+	{
+		"number": "11",
+		"status": "接待中",
+		"complected": "25"
+	},
+	{
+		"number": "12",
+		"status": "接待中",
+		"complected": "26"
+	},
+	{
+		"number": "13",
+		"status": "接待中",
+		"complected": "27"
+	},
+	{
+		"number": "14",
+		"status": "接待中",
+		"complected": "28"
+	},
+	{
+		"number": "15",
+		"status": "接待中",
+		"complected": "29"
+	},
+	{
+		"number": "16",
+		"status": "暂停接待",
+		"complected": "5"
+	},
+	{
+		"number": "17",
+		"status": "暂停接待",
+		"complected": "6"
+	},
+	{
+		"number": "18",
+		"status": "暂停接待",
+		"complected": "7"
+	},
+	{
+		"number": "19",
+		"status": "暂停接待",
+		"complected": "8"
+	},
+	{
+		"number": "20",
+		"status": "暂停接待",
+		"complected": "9"
+	}
+]

@@ -10,4 +10,14 @@ function waitnumfun(waitnum) {
 		});
 	return waitnum.value	
 }
-export {waitnumfun}
+function tabstatus(tabvalue){
+	axios.get('/tabsta.json')
+		.then(function(response) {
+			tabvalue.value = response.data
+			console.log(tabvalue.value)
+		})
+		.catch(function(error) {
+			console.log(error);
+		});
+}
+export {waitnumfun,tabstatus}
