@@ -107,13 +107,54 @@
 
 .ce_top {
 	flex: 1;
+	display: flex;
+	flex-direction: column;
 }
+.ce_tot{
+	height: 110px;
+	width: 75%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	color: #ffffff;
+	margin-top: 30px;
+	font-size: 18px;
+	color: #09d4d4;
+	font-weight: bold;
+	font-family:simhei;
+}
+.cebotsin{
+	flex: 1;
+	margin: 5px 20px;
+	background:url(../img/degree.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.cet_val{
+	line-height: 30px;
+}
+.cet_text{
+	margin-top: 20px;
+}
+.ce_tobech{
+	flex: 1;
+	margin-top: 10px;
+}
+#ce_tobech{
+	width: 85%;
+	height: 100%;
+	margin:auto;
+}
+
+
+
+
+
+
 
 .ce_bot {
 	height: 380px;
 	width: 100%;
 }
-
 .month_data {
 	height: 340px;
 	width: 85%;
@@ -132,7 +173,7 @@
 	display: flex;
 	flex-direction: row;
 }
-#tps_ri{
+#tps_ri,#tps_ri2,#tps_ri3{
 	height: 300px;
 	width: 450px;
 	margin-right: 30px;
@@ -149,6 +190,7 @@
 }
 .tps_span{
 	color: #ffa500;
+	margin-left:5px;
 }
 .tagpagesin_{
 	display: none;
@@ -235,9 +277,6 @@
 	color: #ffffff;
 	line-height: 25px;
 }
-.ritabbtr:nth-child(odd){
-	background: linear-gradient(to right,#000451,#000232,#000232);
-}
 .rth_td{
 	flex: 1;
 }
@@ -247,6 +286,9 @@
 	display: flex;
 	flex-direction: row;
 	color: #ffffff;
+}
+.ritabbtr:nth-child(even){
+	background: linear-gradient(to right,#000232, #000451, #000232);
 }
 .rth_th{
 	flex: 1;

@@ -16,13 +16,11 @@
 	</div>
 </template>
 
-<script>
-	export default{
-		
-	}
+<script setup>
+	
 </script>
 
-<style>
+<style scoped>
 	#app{
 		text-align: center;
 	}

@@ -26,7 +26,21 @@
 				</div>
 			</div>
 			<div class="boxcenter">
-				<div class="ce_top"></div>
+				<div class="ce_top">
+					<!-- <div class="texttitle">
+						<div class="titex">顾客满意度</div>
+					</div> -->
+					<div class="ce_tot">
+						<div class="cebotsin" v-for="(de,index ) in degreearr" :key="index">
+							<div class="cet_text">{{de.name}}好评率</div>
+							<div class="cet_val" style="color: #ffffff;">{{de.val}}</div>
+						</div>
+					</div>
+					<div class="ce_tobech">
+						<div id="ce_tobech" ref="cetobech"></div>
+					</div>
+					
+				</div>
 				<div class="ce_bot">
 					<div class="texttitle">
 						<div class="titex">当月数据表现</div>
@@ -49,8 +63,8 @@
 									<div class="tps_text" >本季度累积达成:<span class="tps_span">600</span></div>
 									<div class="tps_text" >本季度目标达成:<span class="tps_span">900</span></div>
 									<div class="tps_text" >本季度达成率:<span class="tps_span">66.6%</span></div>
-									<div class="tps_text" >本季度达成率:<span class="tps_span">55.5%</span></div>
-									<div class="tps_text" >同季度增长:<span class="tps_span">11.1%</span><img src="../../public/img/arr_up.png" class="image"/></div>
+									<div class="tps_text" >上季度达成率:<span class="tps_span">55.5%</span></div>
+									<div class="tps_text" >季度增长:<span class="tps_span">11.1%</span><img src="../../public/img/arr_up.png" class="image"/></div>
 								</div>
 								<div class="tps_right">
 									<div class="tps_title">业务完成排名</div>
@@ -58,8 +72,38 @@
 								</div>
 								
 							</div>
-							<div :class="{'tagpagesin_':selectedTab !== 1}" class="tagpagesin">内容2</div>
-							<div :class="{'tagpagesin_':selectedTab !== 2}" class="tagpagesin">内容3</div>
+							<div :class="{'tagpagesin_':selectedTab !== 1}" class="tagpagesin">
+								<div class="tps_le">
+									<div class="tps_text" >本月达成:<span class="tps_span">265</span></div>
+									<div class="tps_text" >目标达成:<span class="tps_span">300</span></div>
+									<div class="tps_text" >目标达成率:<span class="tps_span">88%</span></div>
+									<div class="tps_text" >本季度累积达成:<span class="tps_span">455</span></div>
+									<div class="tps_text" >本季度目标达成:<span class="tps_span">900</span></div>
+									<div class="tps_text" >本季度达成率:<span class="tps_span">50.6%</span></div>
+									<div class="tps_text" >上季度达成率:<span class="tps_span">50.5%</span></div>
+									<div class="tps_text" >季度下降:<span class="tps_span">0.1%</span><img src="../../public/img/arr_down.png" class="image"/></div>
+								</div>
+								<div class="tps_right">
+									<div class="tps_title">业务完成排名</div>
+									<div id="tps_ri2" ref="pieid2"></div>
+								</div>
+							</div>
+							<div :class="{'tagpagesin_':selectedTab !== 2}" class="tagpagesin">
+								<div class="tps_le">
+									<div class="tps_text" >本月达成:<span class="tps_span">285</span></div>
+									<div class="tps_text" >目标达成:<span class="tps_span">300</span></div>
+									<div class="tps_text" >目标达成率:<span class="tps_span">95%</span></div>
+									<div class="tps_text" >本季度累积达成:<span class="tps_span">600</span></div>
+									<div class="tps_text" >本季度目标达成:<span class="tps_span">900</span></div>
+									<div class="tps_text" >上季度达成率:<span class="tps_span">50.6%</span></div>
+									<div class="tps_text" >上季度达成率:<span class="tps_span">50.5%</span></div>
+									<div class="tps_text" >季度下降:<span class="tps_span">0.1%</span><img src="../../public/img/arr_down.png" class="image"/></div>
+								</div>
+								<div class="tps_right">
+									<div class="tps_title">业务完成排名</div>
+									<div id="tps_ri3" ref="pieid3"></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -104,12 +148,13 @@
 	// import * as echarts from 'echarts';
 	import {
 		eacjs,
-		eacline,piee,pieri
+		eacline,piee,piee2,piee3,pieri
 	} from '../assets/echarts.js'
 	import {
-		waitnumfun,tabstatus
+		waitnumfun,tabstatus,sevenvalue
 	} from '../assets/axiosvalue.js'
-	import '../assets/echarts-gl.js'
+	var degreearr = ref([{"name":"业务一","val":"90%"},{"name":"业务二","val":"80%"},{"name":"业务三","val":"85%"}])
+	const cetobech = ref(null)
 	var tags = ref(['业务1', '业务2', '业务3'])
 	const content = ref(['内容1', '内容2', '内容3'])
 	const selectedTab = ref(0)
@@ -125,17 +170,22 @@
 	}
 	const tabscroll = function (){
 		// console.log('容器高度'+tbscref.value.offsetHeight,'滚动高度'+tbscref.value.scrollTop)
-		console.log(tbscref.value.scrollHeight-tbscref.value.offsetHeight)
-		if(tbscref.value.scrollTop < (tbscref.value.scrollHeight-tbscref.value.offsetHeight)){
-			tbscref.value.scrollTop ++ 
-		}else{
-			tbscref.value.scrollTop = 0
+		if(tbscref.value){//onMounted在其他路由中依然会调用该方法
+			if(tbscref.value.scrollTop < (tbscref.value.scrollHeight-tbscref.value.offsetHeight)){
+				tbscref.value.scrollTop ++ 
+			}else{
+				tbscref.value.scrollTop = 0
+			}
 		}
 	}
 	const waitnum = ref([])
 	const echartsRef = ref(null)
 	const echartsline = ref(null)
+	
 	const pieid = ref(null)
+	const pieid2 = ref(null)
+	const pieid3 = ref(null)
+	
 	const pierri = ref(null)
 	const tabvalue = ref([])
 	const tabheight = ref(null)
@@ -152,12 +202,20 @@
 		waitnumfun(waitnum)
 		tabstatus(tabvalue,)
 		inter = setInterval(set,1000)
+		
 		var pieid_ = pieid.value
 		piee(pieid_)
+		var pieid_2 = pieid2.value
+		piee2(pieid_2)
+		var pieid_3 = pieid3.value
+		piee3(pieid_3)
+		
 		var pieri_ = pierri.value
 		pieri(pieri_)
 		boheight.value = tabheight.value.offsetHeight - 60
 		tabscr = setInterval(tabscroll,100)
+		var cetobechval = cetobech.value
+		sevenvalue(cetobechval)
 	});
 	onUnmounted(function(){
 		//切换
