@@ -29,13 +29,15 @@
 }
 
 .top {
-	height: 60px;
+	height: 70px;
 	width: 100%;
 	text-align: center;
 	color: #ffffff;
 	font-size: 24px;
 	line-height: 60px;
 	letter-spacing: 5px;
+	background: url(../img/titletop.png) no-repeat;
+	background-size: 100% 100%;
 }
 
 .bottom {

@@ -1,6 +1,13 @@
 <template>
 	<div id="largeScreen">
 		<div class="top">xxx智能业务大数据监控平台</div>
+		<!-- <router-view />
+		<div style="margin-top: 20px;">
+			<router-link to='/large_screen' class="lin">large_screen</router-link>
+			<router-link to='/index' class="lin">element-plus</router-link>
+			<router-link to='/second' class="lin">layui-vue</router-link>
+			<router-link to='/three' class="lin">echarts</router-link>
+		</div> -->
 		<div class="bottom">
 			<div class="boxleft">
 				<div class="le_top">
@@ -115,7 +122,7 @@
 					</div>
 					<div id="riech" ref="pierri"></div>
 				</div>
-				<div class="ri_bot">
+				<div class="ri_bot" >
 					<div class="texttitle">
 						<div class="titex">接待人员情况</div>
 					</div>
@@ -239,4 +246,5 @@
 
 <style scoped>
 	@import url('/public/css/largescreen.css');
+	
 </style>

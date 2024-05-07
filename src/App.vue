@@ -1,6 +1,5 @@
-<template id="Appvue">
+<template >
 	<div id="app">
-
 		<!--路由视图-->
 		<router-view />
 		<!-- <router-link to='/first'>返回</router-link>| -->
@@ -10,9 +9,6 @@
 			<router-link to='/second' class="lin">layui-vue</router-link>
 			<router-link to='/three' class="lin">echarts</router-link>
 		</div>
-		
-		<!-- <button @click="ax">查看</button> -->
-
 	</div>
 </template>
 

@@ -97,5 +97,20 @@
 		"number": "20",
 		"status": "暂停接待",
 		"complected": "9"
+	},
+	{
+		"number": "21",
+		"status": "暂停接待",
+		"complected": "7"
+	},
+	{
+		"number": "22",
+		"status": "暂停接待",
+		"complected": "8"
+	},
+	{
+		"number": "23",
+		"status": "暂停接待",
+		"complected": "9"
 	}
 ]
